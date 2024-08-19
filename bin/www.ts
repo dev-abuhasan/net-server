@@ -10,7 +10,7 @@ const log = debug('test-node-express:server');
 // Get port from environment and store in Express
 const port = normalizePort(process.env.PORT || '8000');
 app.set('port', port);
-console.log(`Server running on port: ${port}`.yellow.bold)
+console.log(`Server running on port: http://localhost:${port}`.magenta.bold)
 
 // Create HTTP server
 const server = createServer(app);

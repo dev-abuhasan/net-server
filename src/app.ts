@@ -1,22 +1,18 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import 'colors';
-import createError from 'http-errors';
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
-import dotenv from 'dotenv';
-
 import { errorHandler, notFound } from './middleware/error';
-
 import indexRouter from './routes/index';
-import userRoutes from './routes/userRoute';
-
-dotenv.config();
+import userRoutes from './routes/user.routes';
+import './database/db';
 
 const app = express();
 app.use(cors());
-
 
 // view engine setup
 // app.set('views', path.join(__dirname, 'views'));
